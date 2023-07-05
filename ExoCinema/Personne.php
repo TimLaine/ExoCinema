@@ -1,10 +1,10 @@
 <?php
 
 Class Personne{
-    private string $_nom;
-    private string $_prenom;
-    private string $_sexe;
-    private DateTime $_birth;
+    protected string $_nom;
+    protected string $_prenom;
+    protected string $_sexe;
+    protected DateTime $_birth;
 
     public function __construct(string $nom, string $prenom, string $sexe, string $birth){
         $this->_nom = $nom;
