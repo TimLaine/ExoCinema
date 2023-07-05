@@ -13,5 +13,4 @@ Class Role{
     public function setNom($nom){
         $this->_nom = $nom;
     }
-
 }

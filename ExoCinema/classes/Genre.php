@@ -21,4 +21,9 @@ Class Genre{
     public function ajoutFilm(Film $film){
         $this->_films [] = $film;
     }
+    public function __toString(){
+        $result = "";
+        $result .= "$this->_nom";
+        return $result;
+    }
 }

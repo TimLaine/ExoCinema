@@ -37,4 +37,9 @@ Class Personne{
     public function setBirth($birth){
         $this->_birth = New DateTime($birth);
     }
+    public function __toString(){
+        $result = "";
+        $result .= "$this->_prenom $this->_nom";
+        return $result;
+    }
 }
