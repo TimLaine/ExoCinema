@@ -50,6 +50,8 @@ echo "<br>";
 echo $freddy->showCastings();
 echo "<br>";
 echo $hamill->showCastings();
+echo "<br>";
+echo $starwars->showInfo();
 // echo "<br>";
 // echo $lucas->showFilmographie();
 // echo "<br>";

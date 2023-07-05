@@ -69,6 +69,18 @@ Class Film{
         }
         return $result;
     }
+    public function showInfo(){
+        $result = "<h1>$this->_titre</h1>";
+        $result .= "Date de sortie du film : ". $this->_dateSortie->format('d m Y'). "<br>";
+        $result .= "Réalisé par $this->_realisateur <br>";
+        $result .= "$this->_titre est considéré comme faisant partie du genre $this->_genre. <br>";
+        $result .= "<h2>Casting</h2><ul>";
+        foreach($this->_castings as $casting){
+            $result .= "<li>".$casting->getRole()." : ". $casting->getActeur(). "</li>";
+        }
+        $result .= "</ul>";
+        return $result;
+    }
     public function __toString(){
         return "$this->_titre (". $this->_dateSortie->format('Y') .")";
     }
