@@ -6,4 +6,12 @@ Class Realisateur extends Personne{
         parent:: __construct($nom,$prenom,$sexe,$birth);
         $this->_filmographie = [];
     }
+    public function getFilmographie(){
+        foreach ($this->_filmographie as $film){
+            echo "$film <br>";
+        }
+    }
+    public function ajoutFilm(Film $film){
+        $this->_filmographie [] = $film;
+    }
 }

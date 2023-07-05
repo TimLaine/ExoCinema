@@ -17,6 +17,8 @@ Class Film{
         $this->_realisateur = $realisateur;
         $this->_genre = $genre;
         $this->_castings = [];
+        $this->_realisateur->ajoutFilm($this);
+        $this->_genre->ajoutFilm($this);
     }
     public function getTitre(){
         return $this->_titre;
@@ -56,5 +58,10 @@ Class Film{
     }
     public function setGenre($_genre){
         $this->_genre = $_genre;
+    }
+    public function __toString(){
+        $result = "";
+        $result .= "$this->_titre";
+        return $result;
     }
 }
