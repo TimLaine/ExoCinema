@@ -61,7 +61,7 @@ Class Film{
     }
     public function __toString(){
         $result = "";
-        $result .= "$this->_titre";
+        $result .= "$this->_titre (". $this->_dateSortie->format('Y') .")";
         return $result;
     }
 }

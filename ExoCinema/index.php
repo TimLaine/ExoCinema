@@ -13,6 +13,6 @@ echo $clooney->getPrenom();
 echo $clooney->getSexe();
 echo $clooney->getBirth()->format('d m Y');
 echo "<br>";
-$scifi->getFilms();
-$clooney->getFilmographie();
+echo $scifi->showFilms();
+echo $clooney->showFilmographie();
 echo "$scifi $clooney";

@@ -26,4 +26,11 @@ Class Genre{
         $result .= "$this->_nom";
         return $result;
     }
+    public function showFilms(){
+        $result = "Les films du genre $this->_nom sont :<br>";
+        foreach($this->_films as $film){
+            $result .= "$film <br>";
+        }
+        return $result;
+    }
 }
