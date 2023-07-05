@@ -10,11 +10,6 @@ Class Genre{
     public function getNom(){
         return $this->_nom;
     }
-    public function getFilms(){
-        foreach ($this->_films as $film){
-            echo "$film <br>";
-        };
-    }
     public function setNom($nom){
         $this->_nom = $nom;
     }
