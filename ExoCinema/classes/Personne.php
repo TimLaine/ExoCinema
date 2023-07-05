@@ -38,8 +38,6 @@ Class Personne{
         $this->_birth = New DateTime($birth);
     }
     public function __toString(){
-        $result = "";
-        $result .= "$this->_prenom $this->_nom";
-        return $result;
+        return "$this->_prenom $this->_nom";
     }
 }

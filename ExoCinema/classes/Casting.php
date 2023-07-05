@@ -8,8 +8,23 @@ Class Casting{
         $this->_acteur = $acteur;
         $this->_role = $role;
         $this->_film = $film;
-        $this->_acteur->ajoutCastings($this->_film, $this->_role);
-        $this->_role->ajoutCastings($this->_acteur, $this->_film);
-        $this->_film->ajoutCastings($this->_role, $this->_acteur);
+        $this->_acteur->ajoutCastings($this);
+        $this->_role->ajoutCastings($this);
+        $this->_film->ajoutCastings($this);
+    }
+
+    public function getActeur()
+    {
+        return $this->_acteur;
+    }
+
+   public function getRole()
+    {
+        return $this->_role;
+    }
+
+    public function getFilm()
+    {
+        return $this->_film;
     }
 }

@@ -7,13 +7,13 @@ Class Acteur extends Personne{
         $this->_castings = [];
     }
 
-    public function ajoutCastings(string $film, string $role){
-        $this->_castings [$film] = $role;
+    public function ajoutCastings(Casting $casting){
+        $this->_castings [] = $casting;
     }
     public function showCastings(){
-        $result = "$this->_prenom $this->_nom a joué les rôles suivants :<br>";
-        foreach($this->_castings as $film=>$role){
-            $result .= "$film : $role <br>";
+        $result = $this ." a joué les rôles suivants :<br>";
+        foreach($this->_castings as $casting){
+            $result .= $casting->getFilm()." ".$casting->getRole()."<br>";
         }
         return $result;
     }

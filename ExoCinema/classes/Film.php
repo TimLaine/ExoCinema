@@ -59,19 +59,17 @@ Class Film{
     public function setGenre($_genre){
         $this->_genre = $_genre;
     }
-    public function ajoutCastings(string $role,string $acteur){
-        $this->_castings[$role] = $acteur;
+    public function ajoutCastings(Casting $casting){
+        $this->_castings [] = $casting;
     }
     public function showCastings(){
-        $result = "Le casting du film $this->_titre :<br>";
-        foreach($this->_castings as $role=>$acteur){
-            $result .= "$role : $acteur <br>";
+        $result = "Le casting du film $this :<br>";
+        foreach($this->_castings as $casting){
+            $result .= $casting->getRole(). " : " .$casting->getActeur(). "<br>";
         }
         return $result;
     }
     public function __toString(){
-        $result = "";
-        $result .= "$this->_titre (". $this->_dateSortie->format('Y') .")";
-        return $result;
+        return "$this->_titre (". $this->_dateSortie->format('Y') .")";
     }
 }
