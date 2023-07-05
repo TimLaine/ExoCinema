@@ -6,7 +6,6 @@ Class Genre{
     public function __construct($nom){
         $this->_nom = $nom;
     }
-
     public function getNom(){
         return $this->_nom;
     }

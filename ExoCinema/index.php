@@ -1,11 +1,8 @@
 <?php
-include "Personne.php";
-include "Acteur.php";
-include "Realisateur.php";
-include "Casting.php";
-include "Film.php";
-include "Genre.php";
-include "Role.php";
+spl_autoload_register(function ($class_name) {
+    include 'classes/'. $class_name . '.php';
+});
+
 $clooney = new Realisateur("Clooney","George","Homme","6-05-1961");
 echo $clooney->getNom();
 echo $clooney->getPrenom();
